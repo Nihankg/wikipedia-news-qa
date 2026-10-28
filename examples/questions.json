@@ -1,0 +1,7 @@
+[
+  {"source": "Associated Press", "question": "When was the Associated Press founded?", "reference_answers": ["1846", "May 1846"]},
+  {"source": "Reuters", "question": "Who established Reuters?", "reference_answers": ["Paul Reuter", "Paul Julius Reuter"]},
+  {"source": "Forbes", "question": "Where is Forbes headquartered?", "reference_answers": ["Jersey City, New Jersey", "Jersey City"]},
+  {"source": "The New York Times", "question": "In what year was The New York Times founded?", "reference_answers": ["1851"]},
+  {"source": "Associated Press", "question": "What is the password for the Associated Press internal payroll system?", "reference_answers": [], "note": "Unanswerable control: the collected public article provides no such information."}
+]
