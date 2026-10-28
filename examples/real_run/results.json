@@ -1,0 +1,391 @@
+{
+  "run_at": "2026-10-28T18:29:36.291545+00:00",
+  "model": "deepset/roberta-base-squad2",
+  "device": "CPU",
+  "retrieve_k": 5,
+  "answer_k": 3,
+  "python": "3.11.8",
+  "packages": {
+    "farm-haystack": "1.26.4.post0",
+    "transformers": "4.52.4",
+    "torch": "2.7.1"
+  },
+  "corpus_sha256": "4cb84b0ca576468d8426449d5b247c5314e6d5a2a43e07d85157d325f8f5b142",
+  "passage_count": 148,
+  "sources": [
+    "Associated Press",
+    "Forbes",
+    "Reuters",
+    "The New York Times"
+  ],
+  "results": [
+    {
+      "question": "When was the Associated Press founded?",
+      "source_filter": "Associated Press",
+      "answers": [
+        {
+          "answer": "1846",
+          "score": 0.9949682950973511,
+          "context": "an not-for-profit news agency headquartered in New York City. Founded in 1846, it operates as a cooperative, unincorporated association, and produces ",
+          "document_id": "Associated Press:75b46273fbc8:0",
+          "meta": {
+            "source": "Associated Press",
+            "url": "https://en.wikipedia.org/wiki/Associated_Press",
+            "revision_id": 1378087166,
+            "revision_timestamp": "2026-10-02T22:15:03Z",
+            "fetched_at": "2026-10-28T18:28:17.899702+00:00",
+            "word_start": 0,
+            "word_end": 180
+          },
+          "offsets_in_context": [
+            {
+              "start": 73,
+              "end": 77
+            }
+          ]
+        },
+        {
+          "answer": "1994",
+          "score": 0.5982498526573181,
+          "context": "ge Football Player of the Year == Associated Press Television News == In 1994, London-based Associated Press Television (APTV) was founded to provide ",
+          "document_id": "Associated Press:75b46273fbc8:2550",
+          "meta": {
+            "source": "Associated Press",
+            "url": "https://en.wikipedia.org/wiki/Associated_Press",
+            "revision_id": 1378087166,
+            "revision_timestamp": "2026-10-02T22:15:03Z",
+            "fetched_at": "2026-10-28T18:28:17.899702+00:00",
+            "word_start": 2550,
+            "word_end": 2730
+          },
+          "offsets_in_context": [
+            {
+              "start": 73,
+              "end": 77
+            }
+          ]
+        },
+        {
+          "answer": "1994",
+          "score": 0.3227478265762329,
+          "context": "ge Football Player of the Year == Associated Press Television News == In 1994, London-based Associated Press Television (APTV) was founded to provide ",
+          "document_id": "Associated Press:75b46273fbc8:2700",
+          "meta": {
+            "source": "Associated Press",
+            "url": "https://en.wikipedia.org/wiki/Associated_Press",
+            "revision_id": 1378087166,
+            "revision_timestamp": "2026-10-02T22:15:03Z",
+            "fetched_at": "2026-10-28T18:28:17.899702+00:00",
+            "word_start": 2700,
+            "word_end": 2880
+          },
+          "offsets_in_context": [
+            {
+              "start": 73,
+              "end": 77
+            }
+          ]
+        }
+      ],
+      "elapsed_seconds": 1.417,
+      "reference_answers": [
+        "1846",
+        "May 1846"
+      ]
+    },
+    {
+      "question": "Who established Reuters?",
+      "source_filter": "Reuters",
+      "answers": [
+        {
+          "answer": "Paul Reuter",
+          "score": 0.9329699873924255,
+          "context": "cy was established in London in 1851 by the German-born British baron Paul Reuter. The Thomson Corporation of Canada acquired the agency in a 2008 cor",
+          "document_id": "Reuters:a24a5a98b44a:0",
+          "meta": {
+            "source": "Reuters",
+            "url": "https://en.wikipedia.org/wiki/Reuters",
+            "revision_id": 1381602016,
+            "revision_timestamp": "2026-10-23T16:30:08Z",
+            "fetched_at": "2026-10-28T18:28:19.140060+00:00",
+            "word_start": 0,
+            "word_end": 180
+          },
+          "offsets_in_context": [
+            {
+              "start": 70,
+              "end": 81
+            }
+          ]
+        },
+        {
+          "answer": "Paul Julius Reuter",
+          "score": 0.20593735575675964,
+          "context": "History == === 19th century === Paul Julius Reuter worked at a book-publishing firm in Berlin and was involved in distributing radical pamphlets at th",
+          "document_id": "Reuters:a24a5a98b44a:150",
+          "meta": {
+            "source": "Reuters",
+            "url": "https://en.wikipedia.org/wiki/Reuters",
+            "revision_id": 1381602016,
+            "revision_timestamp": "2026-10-23T16:30:08Z",
+            "fetched_at": "2026-10-28T18:28:19.140060+00:00",
+            "word_start": 150,
+            "word_end": 330
+          },
+          "offsets_in_context": [
+            {
+              "start": 32,
+              "end": 50
+            }
+          ]
+        },
+        {
+          "answer": "Reuters announced that Russian news agency TASS",
+          "score": 0.008640953339636326,
+          "context": "=== On 1 June 2020, Reuters announced that Russian news agency TASS had joined its \"Reuters Connect\" programme, comprising 18 partner agencies at the ",
+          "document_id": "Reuters:a24a5a98b44a:3000",
+          "meta": {
+            "source": "Reuters",
+            "url": "https://en.wikipedia.org/wiki/Reuters",
+            "revision_id": 1381602016,
+            "revision_timestamp": "2026-10-23T16:30:08Z",
+            "fetched_at": "2026-10-28T18:28:19.140060+00:00",
+            "word_start": 3000,
+            "word_end": 3180
+          },
+          "offsets_in_context": [
+            {
+              "start": 20,
+              "end": 67
+            }
+          ]
+        }
+      ],
+      "elapsed_seconds": 0.422,
+      "reference_answers": [
+        "Paul Reuter",
+        "Paul Julius Reuter"
+      ]
+    },
+    {
+      "question": "Where is Forbes headquartered?",
+      "source_filter": "Forbes",
+      "answers": [
+        {
+          "answer": "Jersey City, New Jersey",
+          "score": 0.9854773879051208,
+          "context": "as been CEO since January 2025. The company is headquartered in Jersey City, New Jersey. Published eight times per year, Forbes features articles on f",
+          "document_id": "Forbes:a675cef34b08:0",
+          "meta": {
+            "source": "Forbes",
+            "url": "https://en.wikipedia.org/wiki/Forbes",
+            "revision_id": 1375833728,
+            "revision_timestamp": "2026-09-20T10:27:02Z",
+            "fetched_at": "2026-10-28T18:28:20.349176+00:00",
+            "word_start": 0,
+            "word_end": 180
+          },
+          "offsets_in_context": [
+            {
+              "start": 64,
+              "end": 87
+            }
+          ]
+        },
+        {
+          "answer": "Manhattan",
+          "score": 0.3991847038269043,
+          "context": "ched an agreement to sell its headquarters building on Fifth Avenue in Manhattan to New York University; terms of the deal were not publicly reported,",
+          "document_id": "Forbes:a675cef34b08:450",
+          "meta": {
+            "source": "Forbes",
+            "url": "https://en.wikipedia.org/wiki/Forbes",
+            "revision_id": 1375833728,
+            "revision_timestamp": "2026-09-20T10:27:02Z",
+            "fetched_at": "2026-10-28T18:28:20.349176+00:00",
+            "word_start": 450,
+            "word_end": 630
+          },
+          "offsets_in_context": [
+            {
+              "start": 71,
+              "end": 80
+            }
+          ]
+        },
+        {
+          "answer": "Ashford University",
+          "score": 0.02363404631614685,
+          "context": "es Travel Guide since 2009. In 2013, Forbes licensed its brand to Ashford University, and assisted with the launch of the Forbes School of Business & ",
+          "document_id": "Forbes:a675cef34b08:1050",
+          "meta": {
+            "source": "Forbes",
+            "url": "https://en.wikipedia.org/wiki/Forbes",
+            "revision_id": 1375833728,
+            "revision_timestamp": "2026-09-20T10:27:02Z",
+            "fetched_at": "2026-10-28T18:28:20.349176+00:00",
+            "word_start": 1050,
+            "word_end": 1230
+          },
+          "offsets_in_context": [
+            {
+              "start": 66,
+              "end": 84
+            }
+          ]
+        }
+      ],
+      "elapsed_seconds": 0.412,
+      "reference_answers": [
+        "Jersey City, New Jersey",
+        "Jersey City"
+      ]
+    },
+    {
+      "question": "In what year was The New York Times founded?",
+      "source_filter": "The New York Times",
+      "answers": [
+        {
+          "answer": "1851",
+          "score": 0.9864075779914856,
+          "context": "attan. The Times was founded as the conservative New-York Daily Times in 1851, and came to national recognition in the 1870s with its aggressive cover",
+          "document_id": "The New York Times:4ef6bf45767f:0",
+          "meta": {
+            "source": "The New York Times",
+            "url": "https://en.wikipedia.org/wiki/The_New_York_Times",
+            "revision_id": 1379161752,
+            "revision_timestamp": "2026-10-08T08:04:39Z",
+            "fetched_at": "2026-10-28T18:28:21.805503+00:00",
+            "word_start": 0,
+            "word_end": 180
+          },
+          "offsets_in_context": [
+            {
+              "start": 73,
+              "end": 77
+            }
+          ]
+        },
+        {
+          "answer": "2024",
+          "score": 0.027125949040055275,
+          "context": "The New York Times's distribution center March 14, 2024 and executive editor Joseph Kahn's residence was splattered with red paint on August 25, 2025.",
+          "document_id": "The New York Times:4ef6bf45767f:10200",
+          "meta": {
+            "source": "The New York Times",
+            "url": "https://en.wikipedia.org/wiki/The_New_York_Times",
+            "revision_id": 1379161752,
+            "revision_timestamp": "2026-10-08T08:04:39Z",
+            "fetched_at": "2026-10-28T18:28:21.805503+00:00",
+            "word_start": 10200,
+            "word_end": 10380
+          },
+          "offsets_in_context": [
+            {
+              "start": 51,
+              "end": 55
+            }
+          ]
+        },
+        {
+          "answer": "1978",
+          "score": 0.010003875941038132,
+          "context": "eld a one-day strike, the first interruption to The New York Times since 1978. The New York Times Guild reached an agreement in May 2023 to increase m",
+          "document_id": "The New York Times:4ef6bf45767f:3750",
+          "meta": {
+            "source": "The New York Times",
+            "url": "https://en.wikipedia.org/wiki/The_New_York_Times",
+            "revision_id": 1379161752,
+            "revision_timestamp": "2026-10-08T08:04:39Z",
+            "fetched_at": "2026-10-28T18:28:21.805503+00:00",
+            "word_start": 3750,
+            "word_end": 3930
+          },
+          "offsets_in_context": [
+            {
+              "start": 73,
+              "end": 77
+            }
+          ]
+        }
+      ],
+      "elapsed_seconds": 0.415,
+      "reference_answers": [
+        "1851"
+      ]
+    },
+    {
+      "question": "What is the password for the Associated Press internal payroll system?",
+      "source_filter": "Associated Press",
+      "answers": [
+        {
+          "answer": "NFT",
+          "score": 0.07008780539035797,
+          "context": "be put up for auction ... AP's NFT marketplace is a very early pilot program, and we are immediately reviewing our efforts\". No further NFTs were anno",
+          "document_id": "Associated Press:75b46273fbc8:4800",
+          "meta": {
+            "source": "Associated Press",
+            "url": "https://en.wikipedia.org/wiki/Associated_Press",
+            "revision_id": 1378087166,
+            "revision_timestamp": "2026-10-02T22:15:03Z",
+            "fetched_at": "2026-10-28T18:28:17.899702+00:00",
+            "word_start": 4800,
+            "word_end": 4980
+          },
+          "offsets_in_context": [
+            {
+              "start": 31,
+              "end": 34
+            }
+          ]
+        },
+        {
+          "answer": "AP Votecast",
+          "score": 0.011681271716952324,
+          "context": "dquarters to 200 Liberty Street, New York City. 2018: The AP unveiled AP Votecast to replace exit polls for the 2018 US midterm elections. == Governan",
+          "document_id": "Associated Press:75b46273fbc8:1800",
+          "meta": {
+            "source": "Associated Press",
+            "url": "https://en.wikipedia.org/wiki/Associated_Press",
+            "revision_id": 1378087166,
+            "revision_timestamp": "2026-10-02T22:15:03Z",
+            "fetched_at": "2026-10-28T18:28:17.899702+00:00",
+            "word_start": 1800,
+            "word_end": 1980
+          },
+          "offsets_in_context": [
+            {
+              "start": 70,
+              "end": 81
+            }
+          ]
+        },
+        {
+          "answer": "AP VoteCast",
+          "score": 0.005081930663436651,
+          "context": " on the final results. In 2018, the AP introduced a new system called AP VoteCast, which was developed together with NORC at the University of Chicago",
+          "document_id": "Associated Press:75b46273fbc8:2250",
+          "meta": {
+            "source": "Associated Press",
+            "url": "https://en.wikipedia.org/wiki/Associated_Press",
+            "revision_id": 1378087166,
+            "revision_timestamp": "2026-10-02T22:15:03Z",
+            "fetched_at": "2026-10-28T18:28:17.899702+00:00",
+            "word_start": 2250,
+            "word_end": 2430
+          },
+          "offsets_in_context": [
+            {
+              "start": 70,
+              "end": 81
+            }
+          ]
+        }
+      ],
+      "elapsed_seconds": 0.493,
+      "reference_answers": [],
+      "note": "Unanswerable control: the collected public article provides no such information."
+    }
+  ],
+  "scope": "Five illustrative, manually selected questions; not a representative benchmark. References were read from the collected articles before inference. All predictions are retained, including the unanswerable control."
+}
