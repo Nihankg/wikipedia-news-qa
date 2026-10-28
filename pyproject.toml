@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wikipedia-news-qa"
+version = "0.1.0"
+description = "Wikipedia news-outlet corpus collection and source-filtered extractive question answering"
+requires-python = ">=3.10"
+authors = [{name = "Nihan Karagul"}]
+dependencies = []
+
+[project.optional-dependencies]
+qa = ["farm-haystack[inference]==1.26.4", "numpy<2"]
+
+[project.scripts]
+news-qa = "news_qa.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["news_qa*"]
