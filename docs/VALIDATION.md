@@ -17,9 +17,15 @@ The corrected source-specific index passed a real Haystack BM25 integration chec
 
 ## Not yet validated
 
-- Live Wikipedia collection.
 - Fresh installation of the optional legacy Haystack dependency stack.
-- End-to-end model download and inference for this packaged version.
-- Accuracy, retrieval recall, or performance on answerable/unanswerable questions.
+- General accuracy, retrieval recall, or representative performance on answerable/unanswerable questions.
 
-Before reporting model results, install the QA dependencies, run the demo and a real-source query, manually inspect source provenance, and save an evaluation set and corpus snapshot.
+## End-to-end demonstration: October 28, 2026
+
+- Live MediaWiki collection succeeded for Associated Press, Reuters, Forbes, and The New York Times; zero failed titles.
+- Passage preparation produced 148 passages, with 180 words per passage and 30-word overlap.
+- Downloaded and loaded `deepset/roberta-base-squad2` and ran actual CPU inference through Haystack.
+- Ran the five questions in `examples/questions.json` with BM25 top-5 retrieval and reader top-3 answers, retaining all candidates.
+- The top answer for each of four answerable questions matched a reference read from the collected article before inference.
+- An intentionally unanswerable control returned the irrelevant span `NFT`, demonstrating the absence of a reliable abstention mechanism in this configuration.
+- Run metadata and source revisions are recorded in `examples/real_run/`. This is a demonstration, not a benchmark.
