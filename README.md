@@ -44,7 +44,7 @@ On Windows, activate the environment with `.venv\Scripts\activate`.
 
 ### Optional model backend
 
-The QA code retains the original **Haystack 1.x** API. Use a separate environment for this legacy dependency stack; Python 3.10 is recommended. Its installation and inference have not yet been validated in a fresh environment for this packaged version.
+The QA code retains the original **Haystack 1.x** API. Use a separate environment for this legacy dependency stack; Python 3.10 is recommended. End-to-end inference was validated in an existing Python 3.11 environment; a fresh installation of the optional dependency set has not yet been validated. See the recorded versions in [the real run](examples/real_run/results.json).
 
 ```bash
 pip install -e '.[qa]'
@@ -86,6 +86,28 @@ Use the canonical `source` value in the collected JSONL when setting `--source`;
 
 Collection waits one second between requests by default and uses a 30-second request timeout. Failures are written to `data/articles.jsonl.failures.jsonl`; the command returns exit code 1 if any title fails. Review the log and corpus coverage before proceeding. No automatic retries or checkpoint resume are implemented.
 
+## Real question-answering examples
+
+The pipeline was run on October 28, 2026 using four Wikipedia articles, 148 passages, BM25 top-5 retrieval, and the pretrained RoBERTa reader on CPU.
+
+| Source | Question | Actual top answer | Manual check against collected article |
+| --- | --- | --- | --- |
+| Associated Press | When was the Associated Press founded? | 1846 | Supported |
+| Reuters | Who established Reuters? | Paul Reuter | Supported |
+| Forbes | Where is Forbes headquartered? | Jersey City, New Jersey | Supported |
+| The New York Times | In what year was The New York Times founded? | 1851 | Supported |
+| Associated Press | What is the password for the Associated Press internal payroll system? | NFT | Unsupported: unanswerable control |
+
+These are five manually selected demonstrations, **not a representative accuracy benchmark**. Reference answers were read from the collected articles before inference. All candidates, context excerpts, model scores, source revisions, and runtime versions are retained in [the raw output](examples/real_run/results.json). The unsupported control illustrates that this configuration can return an irrelevant span instead of abstaining; its low model score is not a calibrated abstention rule.
+
+To repeat the batch after collecting and preparing the corpus:
+
+```bash
+python -m news_qa.demo --corpus data/passages.jsonl --questions examples/questions.json --output results/demo.json
+```
+
+See [run notes and provenance](examples/real_run/README.md). Later collection may produce different Wikipedia text.
+
 ## Files and outputs
 
 | Path | Purpose |
@@ -121,7 +143,7 @@ Tests cover passage coverage and source separation, failed titles and redirect d
 - Extractive answers may be incorrect or drawn from irrelevant passages. Questions about absent facts may still produce an answer; abstention is not calibrated here.
 - Word-based passage splitting can break sentences, and words are not model tokens. The reader's own token-window handling is separate from corpus chunking.
 - The in-memory index is rebuilt for each `ask` command; this is a small research workflow, not a deployed search service.
-- No labeled evaluation set or measured accuracy result is included. Model scores should not be presented as evaluation results.
+- A small manually referenced demonstration is included, but no representative evaluation set or general accuracy estimate is claimed. Model scores should not be presented as evaluation results.
 - This project demonstrates Python corpus engineering and pretrained-transformer integration. It does not claim generative-LLM training, security evaluation, or a contribution to the Haystack upstream repository.
 
 ## Attribution and reuse
