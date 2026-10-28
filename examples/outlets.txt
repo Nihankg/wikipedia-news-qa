@@ -1,0 +1,5 @@
+# Exact English Wikipedia article titles; review ambiguous names before collecting.
+Associated Press
+Reuters
+Forbes
+The New York Times
